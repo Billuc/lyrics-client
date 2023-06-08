@@ -1,1 +1,2 @@
 from .abstract_lyrics_client import AbstractLyricsClient
+from .genius_lyrics_client import GeniusLyricsClient

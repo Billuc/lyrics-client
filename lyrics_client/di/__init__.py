@@ -1,1 +1,1 @@
-from .dependency_injection import add_lyrics_client
+from .dependency_injector import add_lyrics_client
