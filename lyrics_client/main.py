@@ -5,6 +5,8 @@ from lyrics_client.classes import FetchLyricsCommand, FetchLyricsResult
 from lyrics_client.di import add_lyrics_client
 from lyrics_client.interfaces import BaseLyricsClient
 
+__all__ = ["LyricsClient"]
+
 
 class LyricsClient:
     def __init__(self):

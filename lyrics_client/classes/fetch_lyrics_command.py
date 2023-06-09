@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
 
+__all__ = ["FetchLyricsCommand"]
+
 @dataclass
 class FetchLyricsCommand:
     song_title: str

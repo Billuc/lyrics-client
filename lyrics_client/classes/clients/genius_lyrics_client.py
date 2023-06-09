@@ -6,6 +6,8 @@ from lyrics_client.classes import FetchLyricsCommand
 from lyrics_client.classes.clients import AbstractLyricsClient
 from lyrics_client.errors import BadFormatError
 
+__all__ = ["GeniusLyricsClient"]
+
 
 class GeniusLyricsClient(AbstractLyricsClient):
     GENIUS_SEARCH_URL = "https://api.genius.com/search"

@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+__all__ = ["FetchLyricsResult"]
+
 @dataclass
 class FetchLyricsResult:
     song_title: str

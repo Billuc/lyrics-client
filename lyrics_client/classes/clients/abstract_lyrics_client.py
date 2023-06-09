@@ -7,6 +7,8 @@ from lyrics_client.classes import FetchLyricsCommand, FetchLyricsResult
 from lyrics_client.interfaces import BaseLyricsClient
 from lyrics_client.errors import NoResultError, BadTitleMatchError
 
+__all__ = ["AbstractLyricsClient"]
+
 
 class AbstractLyricsClient(BaseLyricsClient, metaclass=abc.ABCMeta):
     def __init__(self) -> None:

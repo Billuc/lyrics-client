@@ -37,7 +37,7 @@ The library exposes the LyricsClient class. This class has 2 methods : `get_lyri
 
 Both methods do the same thing : fetching lyrics and returns the results in a list of `FetchLyricsResult`.
 
-However, `get_lyrics` accept a `FetchLyricsRequest` object as parameter, while `get_from_song` accept a song title, the song artists and optionally the clients to use.
+However, `get_lyrics` accept a `FetchLyricsCommand` object as parameter, while `get_from_song` accept a song title, the song artists and optionally the clients to use.
 
 **Example :**
 
@@ -59,7 +59,7 @@ In this method, the clients are registered as a Pipeline. All you need to do is 
 **Example :**
 
 ```python
-from lyrics_client import BaseLyricsClient, add_lyrics_client, FetchLyricsRequest
+from lyrics_client import BaseLyricsClient, add_lyrics_client, FetchLyricsCommand
 from taipan_di import DependencyCollection
 
 services = DependencyCollection()
@@ -67,7 +67,7 @@ add_lyrics_client(services)
 
 provider = services.build()
 client = provider.resolve(BaseLyricsClient)
-request = FetchLyricsRequest("in the end", "linkin park")
+request = FetchLyricsCommand("in the end", "linkin park")
 
 results = client.exec(request)
 lyrics = results[0].lyrics

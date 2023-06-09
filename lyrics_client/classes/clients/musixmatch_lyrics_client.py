@@ -6,6 +6,8 @@ import requests
 from lyrics_client.classes import FetchLyricsCommand
 from lyrics_client.classes.clients import AbstractLyricsClient
 
+__all__ = ["MusixmatchLyricsClient"]
+
 
 class MusixmatchLyricsClient(AbstractLyricsClient):
     MUSIXMATCH_URL = "https://www.musixmatch.com"

@@ -5,6 +5,8 @@ import requests
 from lyrics_client.classes import FetchLyricsCommand
 from lyrics_client.classes.clients import AbstractLyricsClient
 
+__all__ = ["AZLyricsLyricsClient"]
+
 
 class AZLyricsLyricsClient(AbstractLyricsClient):
     AZLYRICS_URL = "https://www.azlyrics.com/"
