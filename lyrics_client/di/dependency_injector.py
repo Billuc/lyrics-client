@@ -1,11 +1,13 @@
 from taipan_di import DependencyCollection
 
 from lyrics_client.interfaces import BaseLyricsClient
-from lyrics_client.classes.clients import GeniusLyricsClient
+from lyrics_client.classes.clients import GeniusLyricsClient, AZLyricsLyricsClient, MusixmatchLyricsClient
 
 def add_lyrics_client(services: DependencyCollection) -> DependencyCollection:
     services.register_pipeline(BaseLyricsClient)\
         .add(GeniusLyricsClient)\
+        .add(AZLyricsLyricsClient)\
+        .add(MusixmatchLyricsClient)\
         .register()
     
     return services

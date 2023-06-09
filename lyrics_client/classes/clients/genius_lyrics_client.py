@@ -39,12 +39,11 @@ class GeniusLyricsClient(AbstractLyricsClient):
         results: Dict[str, str] = {}
         
         for hit in response.json()["response"]["hits"]:
-            results[hit["result"]["full_title"]] = hit["result"]["id"]
+            results[hit["result"]["full_title"]] = f"{self.GENIUS_SONG_URL}/{hit['result']['id']}"
 
         return results
 
-    def fetch_lyrics(self, id: str) -> str:
-        url = f"{self.GENIUS_SONG_URL}/{id}"
+    def fetch_lyrics(self, url: str) -> str:
         song_response = requests.get(url, headers=self.headers, timeout=10)
         
         song_url = song_response.json()["response"]["song"]["url"]

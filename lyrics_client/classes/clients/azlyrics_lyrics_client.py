@@ -1,7 +1,7 @@
 from typing import Dict
-from bs4 import BeautifulSoup, PageElement, ResultSet
-
+from bs4 import BeautifulSoup
 import requests
+
 from lyrics_client.classes import FetchLyricsCommand
 from lyrics_client.classes.clients import AbstractLyricsClient
 
