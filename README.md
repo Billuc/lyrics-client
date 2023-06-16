@@ -16,7 +16,7 @@
 ### Pip
 
 ```
-pip install taipan-di
+pip install lyrics-client
 ```
 
 ### Poetry
@@ -24,7 +24,7 @@ pip install taipan-di
 [Poetry](https://python-poetry.org/) is a Python dependency management and packaging tool. I actually use it for this project.
 
 ```
-poetry add taipan-di
+poetry add lyrics-client
 ```
 
 ## Usage
