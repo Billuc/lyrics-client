@@ -30,7 +30,7 @@ include = ["lyrics_client/py.typed"]
 python = "^3.9"
 beautifulsoup4 = "^4.12.2"
 requests = "^2.31.0"
-taipan-di = "^0.0.4"
+taipan-di = "0.0.7"
 python-slugify = "^8.0.1"
 rapidfuzz = "^3.1.1"
 
