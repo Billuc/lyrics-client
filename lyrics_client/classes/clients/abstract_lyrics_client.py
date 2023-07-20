@@ -12,6 +12,8 @@ __all__ = ["AbstractLyricsClient"]
 
 class AbstractLyricsClient(BaseLyricsClient, metaclass=abc.ABCMeta):
     def __init__(self) -> None:
+        super().__init__()
+
         self.headers = {
             "Connection": "keep-alive",
             "Pragma": "no-cache",

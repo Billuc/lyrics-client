@@ -43,6 +43,9 @@ class MusixmatchLyricsClient(AbstractLyricsClient):
             title_tag = card.select_one("a.title[href^='/lyrics/']")
             artist_tag = card.select_one("a.artist")
             
+            if not title_tag or not artist_tag:
+                continue
+            
             title = title_tag.get_text()
             artist = artist_tag.get_text()
             url = str(title_tag.get('href', ''))
